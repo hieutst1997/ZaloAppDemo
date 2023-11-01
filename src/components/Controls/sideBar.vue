@@ -18,7 +18,6 @@
                     </button>
                 </div>
 
-
                 <div class="col-4 flex items-center justify-between px-6">
                     <button>
                         <i class="fas fa-warehouse"></i>
@@ -34,32 +33,32 @@
 </template>
 
 <script>
-import { defineComponent, ref, watch } from 'vue';
-import { useStore } from 'vuex';
-import { useRouter } from 'vue-router';
-import constants from '@/constants';
+import { defineComponent, ref, watch } from 'vue'
+import { useStore } from 'vuex'
+import { useRouter } from 'vue-router'
+import constants from '@/constants'
 export default defineComponent({
-    name: 'SideBar',
+  name: 'SideBar',
 
-    setup() {
-        const router = useRouter();
-        const store = useStore();
-        const sideBarActive = ref('');
+  setup () {
+    const router = useRouter()
+    const store = useStore()
+    const sideBarActive = ref('')
 
-        watch(
-            () => store.getters.getSieBarActive,
-            (value) => (sideBarActive.value = value),
-        );
+    watch(
+      () => store.getters.getSieBarActive,
+      (value) => (sideBarActive.value = value)
+    )
 
-        async function redirect(url) {
-            await router.push(url);
-        }
+    async function redirect (url) {
+      await router.push(url)
+    }
 
-        return {
-            redirect
-        };
-    },
-});
+    return {
+      redirect
+    }
+  }
+})
 </script>
 <style lang="scss">
     .main-sider-bar{

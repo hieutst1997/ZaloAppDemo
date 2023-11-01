@@ -15,10 +15,9 @@ export default {
   components: {
     SideBar
   },
-  name: 'mainLayout',
-};
+  name: 'mainLayout'
+}
 </script>
-
 
 <style>
 .content-view{

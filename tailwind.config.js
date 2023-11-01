@@ -23,6 +23,9 @@ module.exports = {
         'flex-col-10': '0 0 83.33%',
         'flex-col-11': '0 0 91.67%',
         'flex-col-12': '0 0 100%',
+      },
+      boxShadow : {
+        'shadow-ct-1': '2px 2px 9px 1px rgba(221,221,221,0.25)'
       }
     },
   },

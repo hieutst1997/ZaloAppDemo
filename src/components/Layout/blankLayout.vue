@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  name: 'blankLayout',
-};
+  name: 'blankLayout'
+}
 </script>
