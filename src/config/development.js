@@ -1,6 +1,6 @@
 const config = {
   SERVER: {
-    DOMAIN: 'http://13.212.221.82:8080'
+    DOMAIN: 'https://653c8257d5d6790f5ec80887.mockapi.io/api/v1'
   }
 }
 

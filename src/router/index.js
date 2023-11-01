@@ -1,8 +1,10 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import home from './home'
+import { createRouter, createWebHistory } from 'vue-router';
+import home from './home';
+import chart from './chartReport';
 
 const routes = [
-  ...home
+  ...home,
+  ...chart
 ]
 
 const router = createRouter({

@@ -1,6 +1,7 @@
 <template>
   <div>
-    <main class = 'content-view'>
+    <main class = 'content-view relative'>
+      <Loading v-if = "store.getters.getLoading" />
       <router-view></router-view>
     </main>
     <footer>
@@ -10,16 +11,28 @@
 </template>
 
 <script>
-import SideBar from '@/components/Controls/sideBar.vue'
-export default {
+import { defineComponent } from 'vue';
+import SideBar from '@/components/Controls/sideBar.vue';
+import Loading from '@/components/Loading/loadingStyleOne.vue';
+import { useStore } from 'vuex';
+export default defineComponent({
   components: {
-    SideBar
+    SideBar,
+    Loading
   },
-  name: 'mainLayout'
-}
+  name: 'mainLayout',
+  setup(){
+    const store = useStore();
+
+    return{
+      store
+    }
+  }
+})
+
 </script>
 
-<style>
+<style scoped>
 .content-view{
   width: 100%;
   height: calc(100vh - 76px);

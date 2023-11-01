@@ -25,6 +25,26 @@ const reportStackedBar = async ({ projectCode, userCode, menuType, menuCode, dat
     }
 };
 
+const test = async() => {
+    try {
+        const response = await restFulAPI.get({
+            endPoint: `/user`,
+            body: {
+
+            },
+        });
+
+        if (response) {
+            return response;
+        } else {
+            return alert('đã xảy ra lỗi vui lòng thử lại')
+        }
+    } catch (e) {
+        throw e;
+    }
+}
+
 export default {
-    reportStackedBar
+    reportStackedBar,
+    test
 }

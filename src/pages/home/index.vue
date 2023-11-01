@@ -4,7 +4,7 @@
         <MenuHome />
 
         <div>
-          <button type="" @click = "test">
+          <button type="button" @click = "test">
             test services
           </button>
         </div>
@@ -15,6 +15,7 @@ import { defineComponent } from 'vue';
 import CardLogin from '@/components/User/cardLogin.vue';
 import MenuHome from '@/components/Controls/menuHome.vue';
 import services from '@/services';
+import { useStore } from 'vuex';
 export default defineComponent({
   name: 'Home',
   components: {
@@ -23,17 +24,12 @@ export default defineComponent({
   },
 
   setup () {
-
+    const store = useStore();
     async function test(){
-      const response = await services.ZALO.reportStackedBar({
-        projectCode: 'adsad',
-        userCode: 'sdasd',
-        menuType: 'sadasd',
-        menuCode: 'ádojaosf',
-        dateBegin: '2023-11-01T01:09:41.964Z',
-        dateEnd: '2023-11-01T01:09:41.964Z',
-        keyword: 'óakdoaskdoa'
-      })
+      store.dispatch('setLoading', true);
+      console.log(store.getters)
+      const response = await services.ZALO.test();
+      store.dispatch('setLoading', false);
     }
 
     return {

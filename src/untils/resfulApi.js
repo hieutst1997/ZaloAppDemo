@@ -8,8 +8,8 @@ const backEndURL = `${config.SERVER.DOMAIN}`
 
 axios.interceptors.response.use(
   async (response) => {
-    console.log(response)
-    return response
+    console.log(response.data)
+    return response.data
   },
   async (error) => {
     if (error?.data?.errorCode === 401) {
@@ -33,6 +33,7 @@ const get = async ({ fullUrl = null, headers = null, endPoint = null, params = {
       method: 'GET',
       headers: headers || {
         'accept': '*/*',
+        'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json'
 
       },
@@ -59,6 +60,7 @@ const post = async ({ fullUrl = null, headers = null, endPoint = null, params = 
       method: 'POST',
       headers: headers || {
         'accept': '*/*',
+        'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json'
 
       },

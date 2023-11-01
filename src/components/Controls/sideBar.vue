@@ -3,7 +3,7 @@
         <div class="main-sider-bar flex fixed">
             <div class="flex items-center w-full">
                 <div class="col-4 flex items-center justify-between px-6">
-                    <button>
+                    <button @click = "redirect('/')">
                         <i class="fas fa-home"></i>
                     </button>
 
@@ -51,11 +51,11 @@ export default defineComponent({
     )
 
     async function redirect (url) {
-      await router.push(url)
+      await router.replace(url);
     }
 
     return {
-      redirect
+      redirect,
     }
   }
 })

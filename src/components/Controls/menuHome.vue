@@ -64,7 +64,7 @@ export default defineComponent({
       {
         icon: ic6,
         title: 'Menu 6',
-        link: '/'
+        link: '/ChartPie'
       },
       {
         icon: ic7,
