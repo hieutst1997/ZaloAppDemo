@@ -9,8 +9,12 @@ module.exports = {
       colors: {
         'main': '#FF7868',
         'gray-1': '#E0E1E3',
+        'gray-2': '#F5F5F5',
         'yellow-1': '#FFD153',
-        'yellow-2': '#FFDB7D'
+        'yellow-2': '#FFDB7D',
+        'yellow-3': '#FFCD56',
+        'blue-1': '#37AFD4',
+        'pink-1': '#F75DA6'
       },
       
       flex: {

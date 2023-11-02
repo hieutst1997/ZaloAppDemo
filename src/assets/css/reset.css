@@ -139,6 +139,7 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+  line-height: 1 !important;
 }
 
 a {

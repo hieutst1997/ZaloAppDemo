@@ -39,7 +39,7 @@ export default defineComponent({
       {
         icon: ic1,
         title: 'Report',
-        link: '/'
+        link: '/overViewReport'
       },
       {
         icon: ic2,
@@ -74,7 +74,7 @@ export default defineComponent({
       {
         icon: ic8,
         title: 'Progress',
-        link: '/'
+        link: '/ProgressReport'
       }
     ])
 

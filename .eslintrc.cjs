@@ -28,5 +28,10 @@ module.exports = {
         "vue"
     ],
     "rules": {
+        'vue/component-definition-name-casing': 'off',
+        'vue/multi-word-component-names': 'off',
+        'vue/no-reserved-component-names': 'off',
+        'vue/no-useless-catch': 'off',
+        'no-useless-catch': 'off',
     }
 }
