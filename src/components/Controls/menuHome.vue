@@ -38,13 +38,13 @@ export default defineComponent({
     const dataMenu = ref([
       {
         icon: ic1,
-        title: 'Menu 1',
+        title: 'Report',
         link: '/'
       },
       {
         icon: ic2,
-        title: 'Menu 2',
-        link: '/'
+        title: 'Bar Chart',
+        link: '/ChartBar'
       },
       {
         icon: ic3,
@@ -63,7 +63,7 @@ export default defineComponent({
       },
       {
         icon: ic6,
-        title: 'Menu 6',
+        title: 'Pie Chart',
         link: '/ChartPie'
       },
       {
@@ -73,7 +73,7 @@ export default defineComponent({
       },
       {
         icon: ic8,
-        title: 'Menu 8',
+        title: 'Progress',
         link: '/'
       }
     ])

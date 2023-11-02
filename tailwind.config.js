@@ -7,7 +7,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'main': '#FF7868'
+        'main': '#FF7868',
+        'gray-1': '#E0E1E3',
+        'yellow-1': '#FFD153',
+        'yellow-2': '#FFDB7D'
       },
       
       flex: {

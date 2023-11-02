@@ -5,7 +5,7 @@
         flex 
         items-center 
         relative">
-        <p class = 'pl-2 text-lg font-bold'>
+        <p class = 'pl-3 text-lg font-bold'>
             {{props.data.text}}
         </p>
     </div>
