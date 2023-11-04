@@ -38,5 +38,6 @@ export default defineComponent({
   overflow-y: auto;
   background-color: #fcfcfc;
   padding-bottom: 40px;
+  position: relative;
 }
 </style>
