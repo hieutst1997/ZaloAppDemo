@@ -7,16 +7,16 @@ const config = configApp(import.meta.env.MODE)
 const backEndURL = `${config.SERVER.DOMAIN}`
 
 axios.interceptors.response.use(
-  async (response) => {
-    console.log(response.data)
-    return response.data
-  },
-  async (error) => {
-    if (error?.data?.errorCode === 401) {
-      // something
+    async (response) => {
+        console.log(response.data)
+        return response.data
+    },
+    async (error) => {
+        if (error?.data?.errorCode === 401) {
+            // something
+        }
+        return Promise.reject(error)
     }
-    return Promise.reject(error)
-  }
 )
 
 /**
@@ -27,22 +27,22 @@ axios.interceptors.response.use(
  * @param params
  */
 const get = async ({ fullUrl = null, headers = null, endPoint = null, params = {} }) => {
-  try {
-    return await axios({
-      url: fullUrl || backEndURL + endPoint,
-      method: 'GET',
-      headers: headers || {
-        'accept': '*/*',
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/json'
+    try {
+        return await axios({
+            url: fullUrl || backEndURL + endPoint,
+            method: 'GET',
+            headers: headers || {
+                'accept': '*/*',
+                'Access-Control-Allow-Origin': '*',
+                'Content-Type': 'application/json'
 
-      },
-      data: {},
-      params
-    })
-  } catch (e) {
-    throw e
-  }
+            },
+            data: {},
+            params
+        })
+    } catch (e) {
+        throw e
+    }
 }
 
 /**
@@ -54,25 +54,25 @@ const get = async ({ fullUrl = null, headers = null, endPoint = null, params = {
  */
 
 const post = async ({ fullUrl = null, headers = null, endPoint = null, params = {} }) => {
-  try {
-    return await axios({
-      url: fullUrl || backEndURL + endPoint,
-      method: 'POST',
-      headers: headers || {
-        'accept': '*/*',
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/json'
+    try {
+        return await axios({
+            url: fullUrl || backEndURL + endPoint,
+            method: 'POST',
+            headers: headers || {
+                'accept': '*/*',
+                'Access-Control-Allow-Origin': '*',
+                'Content-Type': 'application/json'
 
-      },
-      data: {},
-      params
-    })
-  } catch (e) {
-    throw e
-  }
+            },
+            data: {},
+            params
+        })
+    } catch (e) {
+        throw e
+    }
 }
 
 export default {
-  get,
-  post
+    get,
+    post
 }

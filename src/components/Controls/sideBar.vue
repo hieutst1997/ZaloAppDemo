@@ -13,7 +13,7 @@
 				</div>
 
 				<div class="col-4 flex items-center justify-center">
-					<button class="qr">
+					<button class="qr" @click = "redirect('/qrCodeScan')">
 						<i class="fas fa-qrcode"></i>
 					</button>
 				</div>

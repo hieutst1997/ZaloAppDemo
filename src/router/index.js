@@ -8,7 +8,12 @@ const routes = [
   ...home,
   ...chart,
   ...progress,
-  ...overView
+  ...overView,
+  {
+    path: '/qrCodeScan',
+    name: 'qrCodeScan',
+    component: () => import('@/pages/qrCodeScan/index.vue')
+  }
 
 ]
 
